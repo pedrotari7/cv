@@ -1,0 +1,467 @@
+%!TEX program = xelatex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Friggeri Resume/CV
+% XeLaTeX Templatebbbbbbb
+% Version 1.0 (5/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Adrien Friggeri (adrien@friggeri.net)
+% https://github.com/afriggeri/CV
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important notes:
+% This template needs to be compiled with XeLaTeX and the bibliography, if used,
+% needs to be compiled with biber rather than bibtex.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{friggeri-cv} % Add 'print' as an option into the square bracket to remove colors from this template for printing
+
+%\addbibresource{bibliography.bib} % Specify the bibliography file to include publications
+
+\begin{document}
+
+\header{João Pedro}{ Alvito}{systems, control and robotics engineer} % Your name and current job title/field
+
+%----------------------------------------------------------------------------------------
+%	SIDEBAR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{aside} % In the aside, each new line forces a line break
+
+%\includegraphics[width=3.5cm,height=3.5cm]{photo}
+\section{contact}
+~
+Karlavägen 21b
+Stockholm, 114 31
+\includegraphics[width=0.4cm,height=0.3cm]{sweden} Sweden
+~
++46 767158776
+~
+\href{mailto:jpfa@kth.se}{jpfa@kth.se}
+skype: pedrotari7
+\section{personal}
+~
+31/08/1990
+male
+\includegraphics[width=0.4cm,height=0.3cm]{portugal}Portuguese
+sintra, lisbon
+\section{languages}
+~
+portuguese mother tongue
+english c1/c2
+swedish b1
+spanish a2
+french a1
+italian a1
+\section{programming}
+%{\color{red} $\varheartsuit$} JavaScript
+~
+Fluent:
+Python
+C/C++
+Matlab
+LabVIEW
+Latex
+Unix/bash
+~
+Knowledge:
+Java
+HTML/XML
+Assembly 
+\end{aside}
+
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{working experience}
+
+\begin{tikzpicture}[snake=zigzag, line before snake = 10cm, line after snake = 10cm,opacity=0.6]
+	%draw horizontal line   
+	\draw (0,0) -- (13,0);
+
+	%draw vertical lines
+	\foreach \x in {0,3,7,13}
+	   \draw (\x cm,8pt) -- (\x cm,-3pt);
+
+
+	%draw nodes
+	\draw (0,0) node[below=3pt] {$ 2011 $} node[above=3pt] {};
+	\draw (1.5,0) node[below=3pt] {$ $} node[above=3pt] {\includegraphics[width=0.8cm,height=0.8cm]{nwc}};
+	\draw (3,0) node[below=3pt] {$2011$} node[above=3pt] {};
+	\draw (7,0) node[below=3pt] {$2013$} node[above=3pt] {\includegraphics[width=0.8cm,height=0.8cm]{ni}};
+	\draw (10,0) node[below=3pt] {} node[above=3pt] {\includegraphics[width=0.8cm,height=0.8cm]{kth}};
+	\draw (13,0) node[below=3pt] {$ Now $} node[above=3pt] {};
+\end{tikzpicture}
+
+%------------------------------------------------
+\begin{entrylist}
+\entry
+{2013--Now}
+{KTH, Royal Institute of Technology}
+{Stockholm, Sweden}
+{
+\begin{wrapfigure}{r}{0.1\textwidth}
+	\vspace{-20pt}
+	\begin{center}
+		\includegraphics[width=1cm,height=1cm]{kth}
+	\end{center}
+\end{wrapfigure}
+\emph{Research Engineer} \\
+
+In the Smart Mobility Lab researchers and students develop and test intelligent transportation solutions in simulated traffic situations with remotely controlled model cars. By connecting vehicles with each other and the surrounding traffic system, this research aims to make transportation more energy efficient and secure. This means for example that trucks can save fuel by decreasing air resistance through platooning, or use GPS data to enable goods transportation to take the shortest route to the destination.
+
+Main tasks:
+\begin{itemize}
+	\item Management of several projects in the Smart Mobility Lab.
+	\item Supervisor of KTH student's projects in the Smart Mobility Lab.
+	\item Development (mainly C, python, Matlab and LabVIEW projects).
+	\item Collaboration in iQMatic project.
+	\item Developement of a test bed for implementation of scenarios with autonomous vehicles.
+	\item Test bed contains several snippets of code developed in mostly in Matlab and LabVIEW with some components in python.
+	\item Some acquired experience in documentation and version control to organize and keep up to date the material available in our lab.
+\end{itemize}
+\\ \\
+\\Contacts for references: 
+\begin{itemize}
+	\item Jonas Mårtensson [ jonas1@kth.se ]
+	\item Karl Henrik Johansson [ kallej@kth.se ]
+\end{itemize}
+\\
+}
+\end{entrylist}
+%------------------------------------------------
+\begin{entrylist}
+\entry
+{2013}
+{NI, National Instruments}
+{Stockholm, Sweden}
+{
+\begin{wrapfigure}{r}{0.1\textwidth}
+	\vspace{-20pt}
+	\begin{center}
+		\includegraphics[width=1cm,height=1cm]{ni}
+	\end{center}
+\end{wrapfigure}
+\emph{Labview certification} 
+\\ \\
+During this period I completed the LabVIEW core 1 \& 2 and successfully attend the LabVIEW certified associate developer exam. According to NI, this certification indicates a broad working knowledge of the LabVIEW environment, a basic understanding of coding and documentation best practices, and the ability to understand and interpret existing code. 
+\\ \\
+\includegraphics[width=5cm,height=1.5cm]{labview}
+\\ \\
+Contacts for references: Payman Tehrani [ payman.tehrani@ni.com ]
+}
+\end{entrylist}
+%------------------------------------------------
+
+\newgeometry{left=3.5cm,top=2.5cm,right=2.5cm,bottom=1.5cm}
+
+\begin{entrylist2}
+\entrynew
+{2011}
+{NWC, Network Concept}
+{Lisbon, Portugal}
+{
+\begin{wrapfigure}{r}{0.1\textwidth}
+	\vspace{-20pt}
+	\begin{center}
+		\includegraphics[width=1cm,height=1cm]{nwc}
+	\end{center}
+\end{wrapfigure}
+\emph{Summer Intern} \\ \\
+I did this short-term internship in the company NWC located in Lisbon. The company develops products for home automation, more precisely integrates all the components into a system that transforms a regular house into a "smart" house. During my time in the company my main tasks were product testing and market research. I was able to give feedback on the current products and do some modifications myself. Overall it was a great experience in a very exciting field of robotics.
+\\ \\
+Contact for references: André Serpa [ andre.serpa@nwc.pt ]
+}
+\end{entrylist2}
+%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{education}
+
+\begin{center}
+	\begin{tikzpicture}[snake=zigzag, line before snake = 10cm, line after snake = 10cm,opacity=0.6]
+		%draw horizontal line   
+		\draw (0,0) -- (4,0);
+		\draw (4,0) -- (13,0);
+
+		%draw vertical lines
+		\foreach \x in {0,3,6,8,9,11,13}
+		   \draw (\x cm,8pt) -- (\x cm,-3pt);
+
+
+		%draw nodes
+		\draw (0,0) node[below=3pt] {$ 1998 $} node[above=3pt] {};
+		\draw (1.5,0) node[below=3pt] {$ $} node[above=3pt] {\includegraphics[width=0.8cm,height=0.8cm]{cav}};
+		\draw (3,0) node[below=3pt] {$ 2004 $} node[above=3pt] {};
+		\draw (4.5,0) node[below=3pt] {} node[above=3pt] {\includegraphics[width=0.8cm,height=0.8cm]{cav}};
+		\draw (6,0) node[below=3pt] {$ 2008 $} node[above=3pt] {};
+		\draw (7,0) node[below=3pt] {} node[above=3pt] {\includegraphics[width=0.8cm,height=0.8cm]{ist}};
+		\draw (8,0) node[below=3pt] {$ 2011 $} node[above=3pt] {};
+		\draw (8.5,0) node[below=3pt] {} node[above=3pt] {\includegraphics[width=0.8cm,height=0.8cm]{ist}};
+		\draw (9,0) node[below=3pt] {$ 2012 $} node[above=3pt] {};
+		\draw (10,0) node[below=3pt] {} node[above=3pt] {\includegraphics[width=0.8cm,height=0.8cm]{kth}};
+		\draw (11,0) node[below=3pt] {$ 2012 $} node[above=3pt] {};
+		\draw (12,0) node[below=3pt] {} node[above=3pt] {\includegraphics[width=0.8cm,height=0.8cm]{kth}};	
+		\draw (13,0) node[below=3pt] {$ 2013 $} node[above=3pt] {};
+	\end{tikzpicture}
+\end{center}
+
+\begin{entrylist2}
+%------------------------------------------------
+\entrynew
+{2013}
+{Master Thesis in systems, control and robotics}
+{KTH, Stockholm, Sweden}
+{
+\begin{wrapfigure}{r}{0.1\textwidth}
+	\vspace{-20pt}
+	\begin{center}
+		\includegraphics[width=1cm,height=1cm]{kth}
+	\end{center}
+\end{wrapfigure}
+This was the last step before finishing my studies. I did my master thesis in the Smart Mobility Lab (SML, is a laboratory that is affiliated  to the automatic control department from KTH). The main knowledge areas of the thesis are autonomous vehicles and vehicle platoonig. The thesis integrates various smaller components from robotics and control's fields of study.  
+\\ 
+"Implementation of Traffic Control With Heavy Duty Vehicle Anti-Platooning" 
+\\
+http://www.diva-portal.org/smash/get/diva2:662328/FULLTEXT01.pdf
+}
+\end{entrylist2}
+%------------------------------------------------
+\begin{entrylist2}
+\entrynew
+{2012}
+{Double degree in systems, control and robotics}
+{KTH, Stockholm, Sweden}
+{
+\begin{wrapfigure}{r}{0.1\textwidth}
+	\vspace{-20pt}
+	\begin{center}
+		\includegraphics[width=1cm,height=1cm]{kth}
+	\end{center}
+\end{wrapfigure}
+In this last year of the master studies I attended the KTH university (royal institute of technology). In the first term I completed the courses that relate the closest to my major. This was a major opportunity to improve myself in an unknown environment and adapt to a different learning method. Simultaneously I completed two levels of swedish (A1/A2).
+
+\setlength{\columnsep}{0cm}
+\begin{multicols}{2}
+	\begin{itemize} \itemsep0.5pt \parskip-1pt \parsep0pt
+		\item Non Linear Control
+		\item Robotics and Autonomous Systems
+	\end{itemize}
+	\begin{itemize}
+		\item Machine Learning
+		\item Theory and methodology of science
+	\end{itemize}
+\end{multicols}
+
+}
+\end{entrylist2}
+%------------------------------------------------
+
+
+\begin{entrylist2}
+\entrynew
+{2011-2012}
+{Double degree in systems, control and robotics}
+{IST, Lisbon, Portugal}
+{
+\begin{wrapfigure}{r}{0.1\textwidth}
+	\vspace{-20pt}
+	\begin{center}
+		\includegraphics[width=1cm,height=1cm]{ist}
+	\end{center}
+\end{wrapfigure}
+In the begining of my master program I was accepted in a international program that awards a double degree, provided by an agreement between the two universities (KTH and IST). I was one of two students in this program, were we must divide our studies between the two universities. I opted for doing my first year in IST (portugal), mostly because I wanted to proceed my career internationally. This program has as major study areas: systems, control and robotics. In this first year I attended the following major courses:
+
+\setlength{\columnsep}{0cm}
+\begin{multicols}{2}
+	\begin{itemize} \itemsep0.5pt \parskip-1pt \parsep0pt
+		\item Image Processing and Vision
+		\item Optimization and Algorithms
+		\item Robotics
+	\end{itemize}
+	\begin{itemize}
+		\item Artificial Intelligence
+		\item Communication Theory
+		\item Computer Controlled Systems and Identification
+	\end{itemize}
+\end{multicols}
+
+}
+\end{entrylist2}
+
+%------------------------------------------------
+\begin{entrylist2}
+\entrynew
+{2008-2011}
+{MSc in Electrical and Computer Engineering}
+{IST, Lisbon, Portugal}
+{
+\begin{wrapfigure}{r}{0.1\textwidth}
+	\vspace{-20pt}
+	\begin{center}
+		\includegraphics[width=1cm,height=1cm]{ist}
+	\end{center}
+\end{wrapfigure}	
+In 2008, I was accept in the Electrical and Computer Engineering program at the 
+renowned portuguese engineering school, IST (Instituto Superior Técnico). 
+\\
+The program consists in an integration between the bachelor and masters, where in the first 3 years one completes the bachelor and the 2 remaining years are dedicated to the masters.
+At this stage, the bachelor, I adquired the basic knowledge that an engineer must have to be able to solve any proposed problem.
+\\
+One of the reasons that led me to choose this program, was precisely the broad learning spectrum at the bachelor level, where I attended introductory courses in different areas:
+\setlength{\columnsep}{0cm}
+\begin{multicols}{2}
+	\begin{itemize} \itemsep0.5pt \parskip-1pt \parsep0pt
+  		\item Electronics
+  		\item Control
+  		\item Energy
+	\end{itemize}
+	\begin{itemize}
+  		\item Computers
+  		\item Telecomunications
+	\end{itemize}
+\end{multicols}
+With the relavant courses:
+\setlength{\columnsep}{0cm}
+\begin{multicols}{2}
+	\begin{itemize} \itemsep0.5pt \parskip-1pt \parsep0pt
+		\item Control
+		\item Modeling and Simulation
+		\item Signals and Systems
+		\item Electronics
+		\item Systems Programming
+		\item Computer Networks
+		\item Digital Systems
+	\end{itemize}
+	\begin{itemize}
+		\item Artificial Intelligence
+		\item Management
+	\end{itemize}
+\end{multicols}
+}
+
+\end{entrylist2}
+%------------------------------------------------
+\begin{entrylist2}
+\entrynew
+{2004--2008}
+%{Masters {\normalfont of Commerce}}
+{High School Education}
+{Colégio D.Afonso V, Lisbon, Portugal}
+{
+\begin{wrapfigure}{r}{0.1\textwidth}
+	\vspace{-20pt}
+	\begin{center}
+		\includegraphics[width=1cm,height=1cm]{cav}
+	\end{center}
+\end{wrapfigure}
+I attended the scientific high school in Portugal where I adquired a broad knowledge in different branches of science. Some of the major courses were the following: Mathematics, English, Chemistry, Physics, Psychology.
+\\
+I finished my studies with an everage of 18 out of 20 or the grade A in the scale A-F.
+}
+\end{entrylist2}
+%------------------------------------------------
+\begin{entrylist2}
+\entrynew
+{1998--2004}
+%{Masters {\normalfont of Commerce}}
+{Basic Education }
+{Colégio D.Afonso V, Lisbon, Portugal}
+{
+\begin{wrapfigure}{r}{0.1\textwidth}
+	\vspace{-20pt}
+	\begin{center}
+		\includegraphics[width=1cm,height=1cm]{cav}
+	\end{center}
+\end{wrapfigure}
+}
+\end{entrylist2}
+%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS
+%----------------------------------------------------------------------------------------
+
+
+
+\section{computer skills}
+As it is natural for an engineer I consider myself computer savvy. With time I adquired experience in diferent programming languages.
+
+
+\setlength{\columnsep}{0cm}
+\begin{multicols}{2}
+	Fluent
+	\begin{itemize} \itemsep0.5pt \parskip-1pt \parsep0pt
+		\item Python
+		\item C/C++
+		\item Matlab
+		\item LabVIEW
+		\item Unix/Bash
+	\end{itemize}
+	Some knowledge
+	\begin{itemize}
+		\item Java
+		\item Javascript
+		\item CSS
+		\item JQuery
+		\item HTML/XML
+		\item Assembly
+	\end{itemize}
+\end{multicols}
+
+Other than programming languages, I'm also experienced in different softwares like Microsoft Office. For reports and general text files I prefer to use Latex tools, because I feel it is much more customizable.   
+
+%----------------------------------------------------------------------------------------
+%	COMMUNICATION SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+%\section{communication skills}
+
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\newpage
+
+\section{interests}
+
+
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+% \section{publications}
+
+% \printbibsection{article}{article in peer-reviewed journal} % Print all articles from the bibliography
+
+% \printbibsection{book}{books} % Print all books from the bibliography
+
+% \begin{refsection} % This is a custom heading for those references marked as "inproceedings" but not containing "keyword=france"
+% \nocite{*}
+% \printbibliography[sorting=chronological, type=inproceedings, title={international peer-reviewed conferences/proceedings}, notkeyword={france}, heading=subbibliography]
+% \end{refsection}
+
+% \begin{refsection} % This is a custom heading for those references marked as "inproceedings" and containing "keyword=france"
+% \nocite{*}
+% \printbibliography[sorting=chronological, type=inproceedings, title={local peer-reviewed conferences/proceedings}, keyword={france}, heading=subbibliography]
+% \end{refsection}
+
+% \printbibsection{misc}{other publications} % Print all miscellaneous entries from the bibliography
+
+% \printbibsection{report}{research reports} % Print all research reports from the bibliography
+
+%----------------------------------------------------------------------------------------

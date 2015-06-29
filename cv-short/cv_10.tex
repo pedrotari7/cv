@@ -1,0 +1,349 @@
+%!TEX program = xelatex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Friggeri Resume/CV
+% XeLaTeX Templatebb
+% Version 1.0 (5/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Adrien Friggeri (adrien@friggeri.net)
+% https://github.com/afriggeri/CV
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important notes:
+% This template needs to be compiled with XeLaTeX and the bibliography, if used,
+% needs to be compiled with biber rather than bibtex.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{friggeri-cv} % Add 'print' as an option into the square bracket to remove colors from this template for printing
+
+%\addbibresource{bibliography.bib} % Specify the bibliography file to include publications
+
+\begin{document}
+
+\header{João Pedro}{ Alvito}{systems, control and robotics engineer} % Your name and current job title/field
+
+%----------------------------------------------------------------------------------------
+%	SIDEBAR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{aside} % In the aside, each new line forces a line break
+
+%\includegraphics[width=3.5cm,height=3.5cm]{photo}
+\section{contact}
+~
+Karlavägen 21b
+Stockholm, 114 31
+\includegraphics[width=0.4cm,height=0.3cm]{sweden} Sweden
+~
++46 767158776
+~
+\href{mailto:jpfa@kth.se}{jpfa@kth.se}
+skype: pedrotari7
+\section{personal}
+~
+31/08/1990
+male
+\includegraphics[width=0.4cm,height=0.3cm]{portugal}Portuguese
+sintra, lisbon
+\section{languages}
+~
+portuguese mother tongue
+english c1/c2
+swedish b1
+spanish a2
+french a1
+italian a1
+\section{programming}
+%{\color{red} $\varheartsuit$} JavaScript
+~
+Fluent:
+Python
+C/C++
+Matlab
+LabVIEW
+Latex
+Unix/bash
+~
+Knowledge:
+Java
+HTML/XML
+Assembly 
+\end{aside}
+
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{working experience}
+
+\begin{tikzpicture}[snake=zigzag, line before snake = 10cm, line after snake = 10cm,opacity=0.6]
+	%draw horizontal line   
+	\draw (0,0) -- (13,0);
+
+	%draw vertical lines
+	\foreach \x in {0,3,7,13}
+	   \draw (\x cm,8pt) -- (\x cm,-3pt);
+
+
+	%draw nodes
+	\draw (0,0) node[below=3pt] {$ 2011 $} node[above=3pt] {};
+	\draw (1.5,0) node[below=3pt] {$ $} node[above=3pt] {\includegraphics[width=0.8cm,height=0.8cm]{nwc}};
+	\draw (3,0) node[below=3pt] {$2011$} node[above=3pt] {};
+	\draw (7,0) node[below=3pt] {$2013$} node[above=3pt] {\includegraphics[width=0.8cm,height=0.8cm]{ni}};
+	\draw (10,0) node[below=3pt] {} node[above=3pt] {\includegraphics[width=0.8cm,height=0.8cm]{kth}};
+	\draw (13,0) node[below=3pt] {$ Now $} node[above=3pt] {};
+\end{tikzpicture}
+
+%------------------------------------------------
+\begin{entrylist}
+\entry
+{2013--Now}
+{KTH, Royal Institute of Technology}
+{Stockholm, Sweden}
+{
+\begin{wrapfigure}{r}{0.1\textwidth}
+	\vspace{-20pt}
+	\begin{center}
+		\includegraphics[width=1cm,height=1cm]{kth}
+	\end{center}
+\end{wrapfigure}
+\emph{Research Engineer} 
+
+Contacts for references: 
+\begin{itemize}
+	\item Jonas Mårtensson [ jonas1@kth.se ]
+	\item Karl Henrik Johansson [ kallej@kth.se ]
+\end{itemize}
+}
+\end{entrylist}
+%------------------------------------------------
+\begin{entrylist}
+\entry
+{2013}
+{NI, National Instruments}
+{Stockholm, Sweden}
+{
+\begin{wrapfigure}{r}{0.1\textwidth}
+	\vspace{-20pt}
+	\begin{center}
+		\includegraphics[width=1cm,height=1cm]{ni}
+	\end{center}
+\end{wrapfigure}
+\emph{Labview certification} 
+Contacts for references: Payman Tehrani [ payman.tehrani@ni.com ]
+}
+\end{entrylist}
+%------------------------------------------------
+
+\begin{entrylist}
+\entry
+{2011}
+{NWC, Network Concept}
+{Lisbon, Portugal}
+{
+\begin{wrapfigure}{r}{0.1\textwidth}
+	\vspace{-20pt}
+	\begin{center}
+		\includegraphics[width=1cm,height=1cm]{nwc}
+	\end{center}
+\end{wrapfigure}
+\emph{Summer Intern}
+Contact for references: André Serpa [ andre.serpa@nwc.pt ]
+}
+\end{entrylist}
+%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{education}
+
+\begin{center}
+	\begin{tikzpicture}[snake=zigzag, line before snake = 10cm, line after snake = 10cm,opacity=0.6]
+		%draw horizontal line   
+		\draw (0,0) -- (4,0);
+		\draw (4,0) -- (13,0);
+
+		%draw vertical lines
+		\foreach \x in {0,3,6,8,9,11,13}
+		   \draw (\x cm,8pt) -- (\x cm,-3pt);
+
+
+		%draw nodes
+		\draw (0,0) node[below=3pt] {$ 1998 $} node[above=3pt] {};
+		\draw (1.5,0) node[below=3pt] {$ $} node[above=3pt] {\includegraphics[width=0.8cm,height=0.8cm]{cav}};
+		\draw (3,0) node[below=3pt] {$ 2004 $} node[above=3pt] {};
+		\draw (4.5,0) node[below=3pt] {} node[above=3pt] {\includegraphics[width=0.8cm,height=0.8cm]{cav}};
+		\draw (6,0) node[below=3pt] {$ 2008 $} node[above=3pt] {};
+		\draw (7,0) node[below=3pt] {} node[above=3pt] {\includegraphics[width=0.8cm,height=0.8cm]{ist}};
+		\draw (8,0) node[below=3pt] {$ 2011 $} node[above=3pt] {};
+		\draw (8.5,0) node[below=3pt] {} node[above=3pt] {\includegraphics[width=0.8cm,height=0.8cm]{ist}};
+		\draw (9,0) node[below=3pt] {$ 2012 $} node[above=3pt] {};
+		\draw (10,0) node[below=3pt] {} node[above=3pt] {\includegraphics[width=0.8cm,height=0.8cm]{kth}};
+		\draw (11,0) node[below=3pt] {$ 2012 $} node[above=3pt] {};
+		\draw (12,0) node[below=3pt] {} node[above=3pt] {\includegraphics[width=0.8cm,height=0.8cm]{kth}};	
+		\draw (13,0) node[below=3pt] {$ 2013 $} node[above=3pt] {};
+	\end{tikzpicture}
+\end{center}
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{2013}
+{Master Thesis in systems, control and robotics}
+{KTH, Stockholm, Sweden}
+{
+\begin{wrapfigure}{r}{0.1\textwidth}
+	\vspace{-20pt}
+	\begin{center}
+		\includegraphics[width=1cm,height=1cm]{kth}
+	\end{center}
+\end{wrapfigure} 
+\\ 
+"Implementation of Traffic Control With Heavy Duty Vehicle Anti-Platooning" 
+\\
+http://www.diva-portal.org/smash/get/diva2:662328/FULLTEXT01.pdf
+}
+\end{entrylist}
+%------------------------------------------------
+\begin{entrylist}
+\entry
+{2012}
+{Double degree in systems, control and robotics}
+{KTH, Stockholm, Sweden}
+{
+}
+\end{entrylist}
+%------------------------------------------------
+
+
+\begin{entrylist}
+\entry
+{2011-2012}
+{Double degree in systems, control and robotics}
+{IST, Lisbon, Portugal}
+{
+\begin{wrapfigure}{r}{0.1\textwidth}
+	\vspace{-20pt}
+	\begin{center}
+		\includegraphics[width=1cm,height=1cm]{ist}
+	\end{center}
+\end{wrapfigure}
+}
+\end{entrylist}
+
+%------------------------------------------------
+\begin{entrylist}
+\entry
+{2008-2011}
+{MSc in Electrical and Computer Engineering}
+{IST, Lisbon, Portugal}
+{
+}
+\end{entrylist}
+%------------------------------------------------
+\begin{entrylist}
+\entry
+{2004-2008}
+%{Masters {\normalfont of Commerce}}
+{High School Education}
+{Colégio D.Afonso V, Lisbon, Portugal}
+{
+}
+\end{entrylist}
+%------------------------------------------------
+\begin{entrylist}
+\entry
+{1998-2004}
+%{Masters {\normalfont of Commerce}}
+{Basic Education }
+{Colégio D.Afonso V, Lisbon, Portugal}
+{
+}
+\end{entrylist}
+%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS
+%----------------------------------------------------------------------------------------
+
+
+
+% \section{computer skills}
+% As it is natural for an engineer I consider myself computer savvy. With time I adquired experience in diferent programming languages.
+
+
+% \setlength{\columnsep}{0cm}
+% \begin{multicols}{2}
+% 	Fluent
+% 	\begin{itemize} \itemsep0.5pt \parskip-1pt \parsep0pt
+% 		\item Python
+% 		\item C/C++
+% 		\item Matlab
+% 		\item LabVIEW
+% 		\item Unix/Bash
+% 	\end{itemize}
+% 	Some knowledge
+% 	\begin{itemize}
+% 		\item Java
+% 		\item Javascript
+% 		\item CSS
+% 		\item JQuery
+% 		\item HTML/XML
+% 		\item Assembly
+% 	\end{itemize}
+% \end{multicols}
+
+% Other than programming languages, I'm also experienced in different softwares like Microsoft Office. For reports and general text files I prefer to use Latex tools, because I feel it is much more customizable.   
+
+%----------------------------------------------------------------------------------------
+%	COMMUNICATION SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+%\section{communication skills}
+
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\newpage
+
+\section{interests}
+
+
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+% \section{publications}
+
+% \printbibsection{article}{article in peer-reviewed journal} % Print all articles from the bibliography
+
+% \printbibsection{book}{books} % Print all books from the bibliography
+
+% \begin{refsection} % This is a custom heading for those references marked as "inproceedings" but not containing "keyword=france"
+% \nocite{*}
+% \printbibliography[sorting=chronological, type=inproceedings, title={international peer-reviewed conferences/proceedings}, notkeyword={france}, heading=subbibliography]
+% \end{refsection}
+
+% \begin{refsection} % This is a custom heading for those references marked as "inproceedings" and containing "keyword=france"
+% \nocite{*}
+% \printbibliography[sorting=chronological, type=inproceedings, title={local peer-reviewed conferences/proceedings}, keyword={france}, heading=subbibliography]
+% \end{refsection}
+
+% \printbibsection{misc}{other publications} % Print all miscellaneous entries from the bibliography
+
+% \printbibsection{report}{research reports} % Print all research reports from the bibliography
+
+%----------------------------------------------------------------------------------------
