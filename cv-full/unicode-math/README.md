@@ -14,9 +14,8 @@ interface and functionality should not be considered completely stable. But
 the more the package is used the more stable it will become. (Things are
 generally working now; it is only minutiae that may change in the future.)
 
-Unicode maths is currently supported to one degree or another by the fonts
+Unicode maths is currently supported by the following freely available fonts:
 
- - [Cambria Math][CM] (Microsoft),
  - [Latin Modern Math][LM] (Bogusław Jackowski, Janusz M. Nowacki)
  - [TeX Gyre Pagella Math][PM] (Bogusław Jackowski, Janusz M. Nowacki)
  - [Asana Math][AM] (Apostolos Syropolous),
@@ -24,14 +23,19 @@ Unicode maths is currently supported to one degree or another by the fonts
  - [STIX][SM] (STI Pub), and
  - [XITS Math][XM] (Khaled Hosny).
 
-With the exception of Cambria Math, which is proprietry, the fonts above
-are all freely available and released under open source licences
+These fonts are available under open source licences
 (the [GUST Font License][GFL] and [Open Font Licence][OFL]).
+
+The following fonts are proprietary with OpenType maths support:
+
+ - [Cambria Math][CM] (Microsoft),
+ - [Minion Math][MM] (Johannes Küster, typoma GmbH)
 
 I'm always looking for new fonts to test with, so please let me know of any
 new releases.
 
 [CM]: http://www.ascenderfonts.com/font/cambria-regular.aspx
+[MM]: http://www.typoma.com/en/fonts.html
 [LM]: http://www.gust.org.pl/projects/e-foundry/lm-math
 [PM]: http://www.ctan.org/pkg/tex-gyre-math-pagella
 [AM]: http://www.ctan.org/tex-archive/fonts/Asana-Math/
@@ -57,12 +61,7 @@ Furthermore, it will be in a different font.
 REQUIREMENTS
 ------------
 
-If you're using an up-to-date TeX Live 2011/2012 or MiKTeX 2.9 then there'll
-be no problems. Otherwise, read on.
-
-As well as running XeTeX or LuaTeX, this package requires recent versions of
-the `fontspec`, `expl3`, `xpackages`, `catchfile`, `trimspaces`,
-`filehook`, and `lualatex-math` packages.
+As well as running XeTeX or LuaTeX, this package requires recent versions of the `fontspec`, `expl3`, `xpackages`, `filehook`, `ucharcat`, and `lualatex-math` packages.
 
 
 MAINTENANCE
@@ -71,87 +70,64 @@ MAINTENANCE
 The current release version is available from CTAN:
 > <http://tug.ctan.org/pkg/unicode-math>
 
-Latest developmental and archived historical versions are
-available from Github:
+Latest developmental and archived historical versions are available from Github:
 > <http://github.com/wspr/unicode-math>
 
 Please file bug reports with minimal examples:
 > <http://github.com/wspr/unicode-math/issues>
 
 
-INSTALLATION
-------------
-
-If you are using the currently supported version of TeX Live (about to be 2012
-at time of writing), you may install the latest release version of the package
-with
-
-    sudo tlmgr update unicode-math
-
-The steps below assume that you have obtained unicode-math either from CTAN or
-Github and you wish to install the package yourself.
-
-Installation and compilation are automated by the Makefile; see below for the
-manual procedure. To re-compile the documentation (requiring XeLaTeX and a
-variety of installed fonts):
-
-    make doc
-
-To install unicode-math in your home texmf tree:
-
-    make install
-
-To install it for all users in your system-wide local texmf tree:
-
-    make install-sys
-
-See `make help` for further information.
-
-
-### Manual procedure
-
-Run TeX on unicode-math.dtx to generate the package file `unicode-math.sty`:
-
-    tex unicode-math.dtx
-
-If you have the necessary fonts, you may compile the documentation
-with XeLaTeX:
-
-    xelatex unicode-math.dtx
-
-To install the package, place unicode-math.sty and unicode-math-table.tex in a
-location searched by XeLaTeX, inside the directory structure
-`<texmf>/tex/latex/unicode-math/`. The appropriate `<texmf>` location for a
-single-user installation can be found with
-
-    kpsewhich --var-value TEXMFHOME
-
-For a system-wide (multi-user) installation, use the location returned by
-
-    kpsewhich --var-value TEXMFLOCAL
-
-
-TEST SUITE
-----------
-
-After installation you can initialise the testsuite with
-
-    make initest
-
-Subsequently, the test suite may be executed with
-
-    make check
-
-Both of these operations will take quite some time and require ImageMagick's
-`convert` tool to be installed.
-They are only necessary if you wish to make changes to unicode-math yourself
-(be sure to initialise the test suite *before* any changes are made to the
-package) and you wish to ensure that your changes have not affected the
-standard behaviour.
-
 
 CHANGE HISTORY
 --------------
+
+- v0.8d (2017/01/25)
+
+  * `vargreek-shape=TeX` and `vargreek-shape=unicode` package options dropped; for consistency and compatibility, `\phi` and `\epsilon` should and will now behave the same as in `TeX`.
+  * On that note, when using control sequences such as `\mbfitsansvarphi` (and so on), there were a few faulty definitions. The new behaviour is to consistenyl define the `varphi` and `varepsilon` ones as those with the "curly" designs.
+  * Add `\wideoverbar`, `\widebreve`, `\widecheck`.
+  * Add `\mathsection`, `\mathparagraph`.
+  * Remove `\mupvarbeta`, `upold(Kk)oppa`, `\up(Ss)tigma`, `\up(Kk)oppa`, `\up(Ss)ampi` — none of these are maths symbols.
+  * `!` (`\mathexclam`) changed from `\mathpunct` to `\mathclose` for backwards compatibility with TeX.
+
+- v0.8c (2015/09/24)
+
+  * Add `\over(left/right)harpoon` as "wide" accents.
+  * Add RTL mathematics operators `\arabicmaj` and `\arabichad`, which correspond to `U+1EEF0` and `U+1EEF1`, resp.
+  * Remove `catchfile` package dependency.
+  * Update some internal names to match expl3 standards.
+
+- v0.8b (2015/09/09)
+
+  * Bug fix: Use the "ucharcat" package to simplify some code that caused some headaches with \tl_rescan:nn.
+
+- v0.8a (2015/08/06)
+
+  * Fix bug with \vert, \|, \(l/r)vert, etc., displaying with the wrong characters.
+
+  * Improve documentation to properly reflect changes in v0.8 and fix some broken examples.
+
+  * No longer reset catcodes of : and @ during \setmathfont .
+
+  * Fix remapping of alphabets (needed for Minion Math) in cases such as:
+
+      \setmathfont[range=bfit->it]{MinionMath-Bold.otf}
+
+- v0.8  (2015/07/29)  **Breaking changes in this update!**
+
+  * `\mathrm` (`\mathup`), `\mathit`, `\mathbf`, `\mathsf`, and `\mathtt` revert to their traditional LaTeX meanings; they are set up to match their equivalent text fonts unless specifically set using `\setmathrm` and friends from `fontspec` or the new `\setmathfontface` in `unicode-math`. These commands should be used for *multi*-letter identifiers.
+
+  * New "symbol" commands have been added, `\symrm` (`\symup`), `symit`, ..., to replace the behaviour of the old commands. These should be used for *single*-letter identifiers. See the package documentation for more detail on these and related commands.
+
+  * Package options `mathit=sym`, `mathbf=sym`, etc., reverse the changes above to revert to pre-v0.8 behaviour for `\mathXYZ`. Regardless of package option, `\symXYZ` always maps to symbols and `\mathtextXYZ` is provided for the traditional `\mathXYZ` font switch.
+
+  * New command `\setoperatorfont` to set the font used for commands such as `\sin` and `\cos`. Usage: `\setoperatorfont\mathbf` or any command defined with `\setmathfontface`.
+
+  * Traditional LaTeX `\DeclareMathAlphabet` now works again for legacy font-loading packages.
+
+  * Commands defined to "force" Greek letters with `\upbeta` and `\itbeta`, etc.
+
+  * Assorted bug fixes and minor changes.
 
 - v0.7e (2014/06/30)
 
@@ -306,7 +282,7 @@ greater.
 
 This work is author-maintained and consists of the files
 
-- unicode-math.dtx,
+- unicode-math*.dtx,
 - unicode-math-table.tex,
 - unimath-example.ltx,
 - unimath-symbols.ltx,
@@ -320,17 +296,15 @@ the derived files
 the compiled documentation files
 
 - unicode-math.pdf,
-- unicode-math-testsuite.pdf,
 - unimath-example.pdf,
 - unimath-symbols.pdf;
 
 and the test suite for this package
 
 - testfiles/umtest-preamble.tex,
-- testfiles/umtest-suite-(F|L|X).tex,
-- testfiles/*.ltx.
+- testfiles/*.(lvt|tlg).
 
 ____________________________________
-Copyright 2006-2012   Will Robertson  <will.robertson@latex-project.org>
-Copyright 2010-2011 Philipp Stephani  <st_philipp@yahoo.de>
-Copyright 2012          Khaled Hosny  <khaledhosny@eglug.org>
+Copyright 2006-2017   Will Robertson <will.robertson@latex-project.org>
+Copyright 2010-2013 Philipp Stephani <st_philipp@yahoo.de>
+Copyright 2012-2015     Khaled Hosny <khaledhosny@eglug.org>

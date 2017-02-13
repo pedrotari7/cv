@@ -21,7 +21,7 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[]{friggeri-cv} % Add 'print' as an option into the square bracket to remove colors from this template for printing
+\documentclass[]{friggeri-cv} % Add 'print' as an option into the square  to remove colors from this template for printing
 
 %\addbibresource{bibliography.bib} % Specify the bibliography file to include publications
 
@@ -35,7 +35,7 @@
 
 \begin{aside} % In the aside, each new line forces a line break
 
-%\includegraphics[width=3.5cm,height=3.5cm]{photo}
+\includegraphics[width=3.5cm,height=3.5cm]{photo}
 \section{contact}
 ~
 Drottning Kristinas Esplanad 53
@@ -89,33 +89,79 @@ Assembly
 	\draw (0,0) -- (13,0);
 
 	%draw vertical lines
-	\foreach \x in {0,3,7,13}
-	   \draw (\x cm,8pt) -- (\x cm,-3pt);
+	%\foreach \x in {0,3,7,13}
+	%   \draw (\x cm,8pt) -- (\x cm,-3pt);
 
 
 	%draw nodes
-	\draw (0,0) node[below=3pt] {$ 2011 $} node[above=3pt] {};
-	\draw (1.5,0) node[below=3pt] {$ $} node[above=3pt] {\includegraphics[width=0.8cm,height=0.8cm]{nwc}};
-	\draw (3,0) node[below=3pt] {$2011$} node[above=3pt] {};
-	\draw (7,0) node[below=3pt] {$2013$} node[above=3pt] {\includegraphics[width=0.8cm,height=0.8cm]{ni}};
-	\draw (10,0) node[below=3pt] {} node[above=3pt] {\includegraphics[width=0.8cm,height=0.8cm]{kth}};
-	\draw (13,0) node[below=3pt] {$ Now $} node[above=3pt] {};
+	\draw (0,0) node[below=3pt] {$2011$} node[above=3pt] {\includegraphics[width=0.8cm,height=0.8cm]{nwc}};
+	\draw (3,0) node[below=3pt] {$2013$} node[above=3pt] {\includegraphics[width=0.8cm,height=0.8cm]{ni}};
+	\draw (5,0) node[below=3pt] {} node[above=3pt] {\includegraphics[width=0.8cm,height=0.8cm]{kth}};
+	\draw (8,0) node[below=3pt] {$2015$} node[above=3pt] {\includegraphics[width=1.4cm,height=0.5cm]{semcon}};
+	\draw (10,0) node[below=3pt] {$2016$} node[above=3pt] {\includegraphics[width=0.8cm,height=0.8cm]{af}};
+	\draw (13,0) node[below=3pt] {$Now$} node[above=3pt] {\includegraphics[width=1.4cm,height=0.6cm]{tobii}};
+
 \end{tikzpicture}
 
 %------------------------------------------------
 \begin{entrylist}
 \entry
-{2015--Now}
+{2016--Now}
+{Tobii}
+{Stockholm, Sweden}
+{
+\begin{wrapfigure}{r}{0.1\textwidth}
+	\vspace{-20pt}
+	\begin{center}
+		\includegraphics[width=1.5cm,height=0.8cm]{tobii}
+	\end{center}
+\end{wrapfigure}
+\emph{Software Engineer} \\
+}
+\end{entrylist}
+
+
+%------------------------------------------------
+\begin{entrylist}
+\entry
+{2016}
+{ÅF}
+{Stockholm, Sweden}
+{
+\begin{wrapfigure}{r}{0.1\textwidth}
+	\vspace{-20pt}
+	\begin{center}
+		\includegraphics[width=1cm,height=1cm]{af}
+	\end{center}
+\end{wrapfigure}
+\emph{Software Engineer Consultant} \\
+
+\\Contacts for references: 
+\begin{itemize}
+	\item Johan Krii [ johan.krii@afconsult.com ]
+\end{itemize}
+}
+\end{entrylist}
+
+
+%------------------------------------------------
+\begin{entrylist}
+\entry
+{2015}
 {Semcon}
 {Stockholm, Sweden}
 {
 \begin{wrapfigure}{r}{0.1\textwidth}
 	\vspace{-20pt}
 	\begin{center}
-		\includegraphics[width=1.4cm,height=0.3cm]{semcon.jpg}
+		\includegraphics[width=1.4cm,height=0.5cm]{semcon}
 	\end{center}
 \end{wrapfigure}
 \emph{Embedded Developer Engineer} \\
+\\Contacts for references: 
+\begin{itemize}
+	\item Jon Ullmark [ jon.ullmark@semcon.com ]
+\end{itemize}
 }
 \end{entrylist}
 
@@ -153,12 +199,15 @@ Main tasks:
 	\item Jonas Mårtensson [ jonas1@kth.se ]
 	\item Karl Henrik Johansson [ kallej@kth.se ]
 \end{itemize}
-\\
 }
+
 \end{entrylist}
+
+\newgeometry{left=3.5cm,top=2.5cm,right=2.5cm,bottom=1.5cm}
+
 %------------------------------------------------
-\begin{entrylist}
-\entry
+\begin{entrylist2}
+\entrynew
 {2013}
 {NI, National Instruments}
 {Stockholm, Sweden}
@@ -172,15 +221,13 @@ Main tasks:
 \emph{Labview certification} 
 \\ \\
 During this period I completed the LabVIEW core 1 \& 2 and successfully attend the LabVIEW certified associate developer exam. According to NI, this certification indicates a broad working knowledge of the LabVIEW environment, a basic understanding of coding and documentation best practices, and the ability to understand and interpret existing code. 
-% \\ \\
-% \includegraphics[width=5cm,height=1.5cm]{labview}
-% \\ \\
+ \\ \\
+\includegraphics[width=5cm,height=1.5cm]{labview}
+ \\ \\
 Contacts for references: Payman Tehrani [ payman.tehrani@ni.com ]
 }
-\end{entrylist}
+\end{entrylist2}
 %------------------------------------------------
-
-\newgeometry{left=3.5cm,top=2.5cm,right=2.5cm,bottom=1.5cm}
 
 \begin{entrylist2}
 \entrynew
@@ -201,6 +248,8 @@ Contact for references: André Serpa [ andre.serpa@nwc.pt ]
 }
 \end{entrylist2}
 %------------------------------------------------
+
+
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
@@ -235,6 +284,8 @@ Contact for references: André Serpa [ andre.serpa@nwc.pt ]
 		\draw (13,0) node[below=3pt] {$ 2013 $} node[above=3pt] {};
 	\end{tikzpicture}
 \end{center}
+
+
 
 \begin{entrylist2}
 %------------------------------------------------
