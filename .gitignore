@@ -8,3 +8,5 @@ cv-full/cv_10.synctex.gz
 *.log
 
 *.gz
+
+.DS_Store
