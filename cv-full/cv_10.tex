@@ -1,47 +1,23 @@
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Friggeri Resume/CV
-% XeLaTeX Templatebbbbbbb
-% Version 1.0 (5/5/13)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Adrien Friggeri (adrien@friggeri.net)
-% https://github.com/afriggeri/CV
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
-% Important notes:
-% This template needs to be compiled with XeLaTeX and the bibliography, if used,
-% needs to be compiled with biber rather than bibtex.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\documentclass[]{friggeri-cv} % Add 'print' as an option into the square  to remove colors from this template for printing
-
-%\addbibresource{bibliography.bib} % Specify the bibliography file to include publications
+\documentclass[]{friggeri-cv}
 
 \begin{document}
 
-\header{Pedro}{ Alvito}{systems, control and robotics engineer} % Your name and current job title/field
+\header{Pedro}{ Alvito}{systems, control and robotics engineer}
 
 %----------------------------------------------------------------------------------------
 %	SIDEBAR SECTION
 %----------------------------------------------------------------------------------------
 
-\begin{aside} % In the aside, each new line forces a line break
+\begin{aside}
 
 \includegraphics[width=3.5cm,height=3.5cm]{photo}
 \section{contact}
 ~
-Körsbärsvägen 9
-Stockholm, 114 23
+@Stockholm
 \includegraphics[width=0.4cm,height=0.3cm]{sweden} Sweden
 ~
-+46 733278767
++46 766291808
 ~
 \href{mailto:jpfa@kth.se}{jpfa@kth.se}
 skype: pedrotari7
@@ -59,15 +35,15 @@ swedish b1
 spanish a2
 french a1
 \section{programming}
-%{\color{red} $\varheartsuit$} JavaScript
 ~
+Javascript
+Typescript
+React
+Angular
+NodeJS
 Python
 C/C++
 Matlab
-Javascript
-Typescript
-NodeJS
-React
 LabVIEW
 Latex
 Unix/bash
@@ -97,14 +73,33 @@ Assembly
 	\draw (5,0) node[below=3pt] {} node[above=3pt] {\includegraphics[width=0.8cm,height=0.8cm]{kth}};
 	\draw (8,0) node[below=3pt] {$2015$} node[above=3pt] {\includegraphics[width=1.4cm,height=0.5cm]{semcon}};
 	\draw (10,0) node[below=3pt] {$2016$} node[above=3pt] {\includegraphics[width=0.8cm,height=0.8cm]{af}};
-	\draw (13,0) node[below=3pt] {$Now$} node[above=3pt] {\includegraphics[width=1.4cm,height=0.6cm]{tobii}};
+	\draw (13,0) node[below=3pt] {$2020$} node[above=3pt] {\includegraphics[width=1.4cm,height=0.6cm]{tobii}};
+	\draw (15,0) node[below=3pt] {$Now$} node[above=3pt] {\includegraphics[width=1.4cm,height=0.6cm]{viaplay}};
 
 \end{tikzpicture}
 
 %------------------------------------------------
 \begin{entrylist}
+	\entry
+	{2020--Now}
+	{Viaplay}
+	{Stockholm, Sweden}
+	{
+	\begin{wrapfigure}{r}{0.1\textwidth}
+		\vspace{-20pt}
+		\begin{center}
+			\includegraphics[width=1.5cm,height=0.8cm]{viaplay}
+		\end{center}
+	\end{wrapfigure}
+	\emph{Software Engineer} \\
+	}
+	\end{entrylist}
+
+
+%------------------------------------------------
+\begin{entrylist}
 \entry
-{2016--Now}
+{2016--2020}
 {Tobii}
 {Stockholm, Sweden}
 {
@@ -419,47 +414,10 @@ With the relavant courses:
 }
 
 \end{entrylist2}
-%------------------------------------------------
-\begin{entrylist2}
-\entrynew
-{2004--2008}
-%{Masters {\normalfont of Commerce}}
-{High School Education}
-{Colégio D.Afonso V, Lisbon, Portugal}
-{
-\begin{wrapfigure}{r}{0.1\textwidth}
-	\vspace{-20pt}
-	\begin{center}
-		\includegraphics[width=1cm,height=1cm]{cav}
-	\end{center}
-\end{wrapfigure}
-I attended the scientific high school in Portugal where I adquired a broad knowledge in different branches of science. Some of the major courses were the following: Mathematics, English, Chemistry, Physics, Psychology.
-\\
-I finished my studies with an everage of 18 out of 20 or the grade A in the scale A-F.
-}
-\end{entrylist2}
-%------------------------------------------------
-\begin{entrylist2}
-\entrynew
-{1998--2004}
-%{Masters {\normalfont of Commerce}}
-{Basic Education }
-{Colégio D.Afonso V, Lisbon, Portugal}
-{
-\begin{wrapfigure}{r}{0.1\textwidth}
-	\vspace{-20pt}
-	\begin{center}
-		\includegraphics[width=1cm,height=1cm]{cav}
-	\end{center}
-\end{wrapfigure}
-}
-\end{entrylist2}
-%------------------------------------------------
 
 %----------------------------------------------------------------------------------------
 %	COMPUTER SKILLS
 %----------------------------------------------------------------------------------------
-
 
 
 \section{computer skills}
@@ -469,12 +427,13 @@ As it is natural for an engineer I consider myself computer savvy. With time I a
 \setlength{\columnsep}{0cm}
 \begin{multicols}{2}
 	\begin{itemize} \itemsep0.5pt \parskip-1pt \parsep0pt
-		\item Python
-		\item C/C++
 		\item Javascript
 		\item Typescript
 		\item React
 		\item NodeJS
+		\item Angular
+		\item Python
+		\item C/C++
 		\item Matlab
 		\item LabVIEW
 		\item Unix/Bash
@@ -487,50 +446,7 @@ As it is natural for an engineer I consider myself computer savvy. With time I a
 \end{multicols}
 
 
-Other than programming languages, I'm also experienced in different softwares like Microsoft Office. For reports and general text files I prefer to use Latex tools, because I feel it is much more customizable.
 
 As an hobby I also often solve problems in the project euler iniciative. Currently I am at the 100+ problems solved level.
-
-%----------------------------------------------------------------------------------------
-%	COMMUNICATION SKILLS SECTION
-%----------------------------------------------------------------------------------------
-
-%\section{communication skills}
-
-
-%----------------------------------------------------------------------------------------
-%	INTERESTS SECTION
-%----------------------------------------------------------------------------------------
-
-% \newpage
-
-% \section{interests}
-
-
-%----------------------------------------------------------------------------------------
-%	PUBLICATIONS SECTION
-%----------------------------------------------------------------------------------------
-
-% \section{publications}
-
-% \printbibsection{article}{article in peer-reviewed journal} % Print all articles from the bibliography
-
-% \printbibsection{book}{books} % Print all books from the bibliography
-
-% \begin{refsection} % This is a custom heading for those references marked as "inproceedings" but not containing "keyword=france"
-	% \nocite{*}
-% \printbibliography[sorting=chronological, type=inproceedings, title={international peer-reviewed conferences/proceedings}, notkeyword={france}, heading=subbibliography]
-% \end{refsection}
-
-% \begin{refsection} % This is a custom heading for those references marked as "inproceedings" and containing "keyword=france"
-% \nocite{*}
-% \printbibliography[sorting=chronological, type=inproceedings, title={local peer-reviewed conferences/proceedings}, keyword={france}, heading=subbibliography]
-% \end{refsection}
-
-% \printbibsection{misc}{other publications} % Print all miscellaneous entries from the bibliography
-
-% \printbibsection{report}{research reports} % Print all research reports from the bibliography
-
-%----------------------------------------------------------------------------------------
 
 \end{document}
